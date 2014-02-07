@@ -1,10 +1,16 @@
+package view;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+public class MenuBar extends JMenuBar {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2095136277753179215L;
 
-public class MenuBar extends JMenuBar{
 	public MenuBar() {
+		// Create a menues and add stuff to them.
 		JMenu file = new JMenu("File");
 		JMenu edit = new JMenu("Edit");
 		JMenu extra = new JMenu("Extra");
