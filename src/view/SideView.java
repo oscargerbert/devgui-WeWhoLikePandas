@@ -9,10 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 //our sidepanel view
+/**
+ * @author Bastawi
+ *
+ */
 public class SideView extends JPanel {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 7087326982021201980L;
 
 	public SideView() {
@@ -37,6 +39,9 @@ public class SideView extends JPanel {
 
 	}
 
+	/**
+	 * 
+	 */
 	public void addEvent() {
 		@SuppressWarnings("unused")
 		AddEventView ae = new AddEventView();
