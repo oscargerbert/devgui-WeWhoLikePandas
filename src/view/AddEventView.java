@@ -10,13 +10,13 @@ import javax.swing.JTextArea;
 import javax.swing.border.Border;
 import javax.swing.border.EtchedBorder;
 
+/**
+ * @author Bastawi
+ *
+ */
 public class AddEventView extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 9136822901942764461L;
-
 	public AddEventView() {
 		// Ready the borders for use
 		Border loweredetched, loweredbevel;
