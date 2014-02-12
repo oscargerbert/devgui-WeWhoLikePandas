@@ -19,9 +19,13 @@ import javax.swing.SwingConstants;
  */
 public class MainCalendarView extends JPanel {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/**
 	 * 
 	 */
+=======
+
+>>>>>>> 73830b9a4768c2da8073c96a0b5cb7eb26e189fc
 =======
 
 >>>>>>> 73830b9a4768c2da8073c96a0b5cb7eb26e189fc
@@ -42,6 +46,9 @@ public class MainCalendarView extends JPanel {
 		initUI();
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 73830b9a4768c2da8073c96a0b5cb7eb26e189fc
 
 	private void initUI()
 	{
@@ -113,6 +120,7 @@ public class MainCalendarView extends JPanel {
 		toggles[day].setSelected(true);
 	}
 
+<<<<<<< HEAD
 =======
 
 	private void initUI()
@@ -185,6 +193,8 @@ public class MainCalendarView extends JPanel {
 		toggles[day].setSelected(true);
 	}
 
+>>>>>>> 73830b9a4768c2da8073c96a0b5cb7eb26e189fc
+=======
 >>>>>>> 73830b9a4768c2da8073c96a0b5cb7eb26e189fc
 	// Show the date when user click
 	private void showDate()
