@@ -9,10 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 //our sidepanel view
+/**
+ * @author Bastawi
+ *
+ */
 public class SideView extends JPanel {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 7087326982021201980L;
 
 	public SideView() {
@@ -21,7 +23,7 @@ public class SideView extends JPanel {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 		// Add the minicalendar and upcomming events window
-		this.add(new MiniCalendarView());
+		this.add(new MainCalendarView());
 		UpcommingEventView.MakeEventPanel(this);
 
 		// Button for adding events
@@ -37,6 +39,9 @@ public class SideView extends JPanel {
 
 	}
 
+	/**
+	 * 
+	 */
 	public void addEvent() {
 		@SuppressWarnings("unused")
 		AddEventView ae = new AddEventView();

@@ -10,22 +10,20 @@ import java.awt.Dimension;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-//import javax.swing.BoxLayout;
-//import javax.swing.JFrame;
-//import javax.swing.JPanel;
+
 
 /**
  * 
  * @author ninaknez
  */
-public class UpcommingEventView {
+public class UpcommingEventView{
 
 	public static void MakeEventPanel(JPanel upcomingeventPanel) {
 
 		JPanel titlePanel = new JPanel();
 		JPanel contentPanel = new JPanel();
 
-		titlePanel.add(new JLabel("Upcomming events"));
+		titlePanel.add(new JLabel("Ongoinging Tasks"));
 		upcomingeventPanel.setBackground(Color.red);
 		titlePanel.setBackground(Color.yellow);
 		contentPanel.setBackground(Color.orange);

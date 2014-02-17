@@ -1,4 +1,4 @@
-package event;
+package data;
 
 import java.sql.Time;
 import java.util.Date;

@@ -3,10 +3,12 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+/**
+ * @author Oscar
+ *
+ */
 public class MenuBar extends JMenuBar {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = -2095136277753179215L;
 
 	public MenuBar() {
