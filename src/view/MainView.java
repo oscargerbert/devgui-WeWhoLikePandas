@@ -38,9 +38,9 @@ public class MainView {
 		JPanel sideWindow = new SideView();
 
 		// set max size of sideWindow
-		sideWindow.setMaximumSize(new Dimension(400, 1200));
+		//sideWindow.setMaximumSize(new Dimension(400, 1200));
 		mainPanel.add(sideWindow);
-		mainPanel.add(new MainCalendarView());
+		mainPanel.add(new MiniCalendarView());
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
 
 		// Wrap main panel in scrollable panel so hidden content can be accessed

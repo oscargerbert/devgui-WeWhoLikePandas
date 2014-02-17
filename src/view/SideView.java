@@ -23,7 +23,7 @@ public class SideView extends JPanel {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 		// Add the minicalendar and upcomming events window
-		this.add(new MiniCalendarView());
+		this.add(new MainCalendarView());
 		UpcommingEventView.MakeEventPanel(this);
 
 		// Button for adding events
