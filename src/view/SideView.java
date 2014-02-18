@@ -27,7 +27,7 @@ public class SideView extends JPanel {
 		UpcommingEventView.MakeEventPanel(this);
 
 		// Button for adding events
-		JButton addEventButton = new JButton("Add Event");
+		/*JButton addEventButton = new JButton("Add Event");
 		this.add(addEventButton);
 
 		// keep watch when user presses Add Event button
@@ -36,7 +36,7 @@ public class SideView extends JPanel {
 				addEvent();
 			}
 		});
-
+*/
 	}
 
 	/**

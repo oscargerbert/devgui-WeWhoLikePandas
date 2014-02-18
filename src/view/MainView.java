@@ -1,6 +1,8 @@
 package view;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -10,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EtchedBorder;
+import data.Controller;
 
 
 /**
@@ -48,9 +51,13 @@ public class MainView {
 
 		layout.setLayout(new BorderLayout());
 		layout.add(mainPanel, BorderLayout.CENTER);
-		JLabel text = new JLabel("plats för datum,tid och knappar osv");
-		text.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
-		layout.add(text, BorderLayout.NORTH);
+		//JLabel text = new JLabel("plats fÃ¶r datum,tid och knappar osv");
+		JPanel panel = new JPanel();
+		panel.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
+		layout.add(panel, BorderLayout.NORTH);
+		JLabel clock = Controller.CurrentDate();		
+		panel.add(clock);
+		
 		mainWindow.setJMenuBar(new MenuBar());
 
 		// Choose what panel to use and do show it
@@ -59,4 +66,5 @@ public class MainView {
 		mainWindow.setVisible(true);
 		mainWindow.setBounds(100, 100, 1200, 800);
 	}
+	
 }
