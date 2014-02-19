@@ -1,8 +1,10 @@
 package view;
 import java.awt.BorderLayout;
+
 import java.awt.Dimension;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+//import java.util.Calendar;
+//import java.util.GregorianCalendar;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -20,30 +22,21 @@ import data.Controller;
  * 
  */
 public class MainView {
-	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				@SuppressWarnings("unused")
-				MainView m = new MainView();
-			}
-		});
-	}
-
-	/**
-	 * 
-	 */
-	public MainView() {
+	private ActionListener c;
+	
+	public MainView(ActionListener e) {
+		c = e;
 		// create all the panels to be used in our program
 		JFrame mainWindow = new JFrame();
 		JPanel mainPanel = new JPanel();
 		JPanel layout = new JPanel();
-		JPanel sideWindow = new SideView();
+		JPanel sideWindow = new SideView(c);
+		
 
 		// set max size of sideWindow
 		//sideWindow.setMaximumSize(new Dimension(400, 1200));
 		mainPanel.add(sideWindow);
-		mainPanel.add(new MiniCalendarView());
+		mainPanel.add(new MiniCalendarView(c));
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
 
 		// Wrap main panel in scrollable panel so hidden content can be accessed
@@ -58,7 +51,7 @@ public class MainView {
 		JLabel clock = Controller.CurrentDate();		
 		panel.add(clock);
 		
-		mainWindow.setJMenuBar(new MenuBar());
+		mainWindow.setJMenuBar(new MenuBar(c));
 
 		// Choose what panel to use and do show it
 		mainWindow.setContentPane(scroller);
@@ -66,5 +59,6 @@ public class MainView {
 		mainWindow.setVisible(true);
 		mainWindow.setBounds(100, 100, 1200, 800);
 	}
+	
 	
 }

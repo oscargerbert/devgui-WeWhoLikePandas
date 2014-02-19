@@ -26,9 +26,11 @@ public class MainCalendarView extends JPanel {
 	private int month;
 	private int date;
 	private String[] week = { "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" };
+	private ActionListener c;
 
-	public MainCalendarView()
+	public MainCalendarView(ActionListener e)
 	{
+		c = e;
 		year = Calendar.getInstance().get(Calendar.YEAR);
 		month = Calendar.getInstance().get(Calendar.MONTH) + 1;
 		date = Calendar.getInstance().get(Calendar.DATE);

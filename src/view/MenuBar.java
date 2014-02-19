@@ -5,9 +5,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
+import data.Controller;
 
 /**
  * @author Oscar
@@ -16,8 +14,10 @@ import java.util.GregorianCalendar;
 public class MenuBar extends JMenuBar {
 	
 	private static final long serialVersionUID = -2095136277753179215L;
+	private ActionListener c;
 
-	public MenuBar() {
+	public MenuBar(ActionListener e) {
+		c =e;
 		// Create a menues and add stuff to them.
 		JMenu file = new JMenu("File");
 		JMenu edit = new JMenu("Edit");
@@ -37,27 +37,17 @@ public class MenuBar extends JMenuBar {
 		extra.add(subMenuItem);
 		
 		close.setToolTipText("Exit Application");
-		close.addActionListener(new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent event) {
-	            System.exit(0);
-	        }
-	    });
-		
-		addevent.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		close.addActionListener(c);
+		addevent.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0){
 				addEvent();
-			}
+			}	
 		});
 	}
-	public void addEvent() {
+	
+	
+	public static void addEvent() {
 		@SuppressWarnings("unused")
 		AddEventView ae = new AddEventView();
-	}
-	public void CurrentDate(){
-		/*JLabel clockLabel = new JLabel(
-				new Date(System.currentTimeMillis()).toString());
-				updateClock(clockLabel);
-			*/	
 	}
 }
