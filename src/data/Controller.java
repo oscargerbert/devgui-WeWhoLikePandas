@@ -18,7 +18,7 @@ public class Controller implements ActionListener {
 	System.out.println("im working");
 	//Object w = e.getSource();
 	//if(w == close){
-	        System.exit(0);
+	        //System.exit(0);
 	}
 	
     
