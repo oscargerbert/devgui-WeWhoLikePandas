@@ -16,18 +16,19 @@ import javax.swing.border.EmptyBorder;
 public class SideView extends JPanel {
 	
 	private static final long serialVersionUID = 7087326982021201980L;
+	private ActionListener c;
 
-	public SideView() {
-
+	public SideView(ActionListener e) {
+		c = e;
 		this.setBorder(new EmptyBorder(10, 10, 10, 10));
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 		// Add the minicalendar and upcomming events window
-		this.add(new MainCalendarView());
+		this.add(new MainCalendarView(c));
 		UpcommingEventView.MakeEventPanel(this);
 
 		// Button for adding events
-		JButton addEventButton = new JButton("Add Event");
+		/*JButton addEventButton = new JButton("Add Event");
 		this.add(addEventButton);
 
 		// keep watch when user presses Add Event button
@@ -36,14 +37,14 @@ public class SideView extends JPanel {
 				addEvent();
 			}
 		});
-
+*/
 	}
 
 	/**
 	 * 
 	 */
-	public void addEvent() {
+	/*public void addEvent() {
 		@SuppressWarnings("unused")
 		AddEventView ae = new AddEventView();
-	}
+	}*/
 }

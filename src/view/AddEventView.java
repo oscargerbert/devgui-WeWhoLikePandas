@@ -1,5 +1,7 @@
 package view;
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -17,7 +19,9 @@ import javax.swing.border.EtchedBorder;
 public class AddEventView extends JFrame {
 
 	private static final long serialVersionUID = 9136822901942764461L;
+	//private ActionListener c;
 	public AddEventView() {
+		//c = e;
 		// Ready the borders for use
 		Border loweredetched, loweredbevel;
 		loweredetched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
