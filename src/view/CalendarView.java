@@ -17,7 +17,7 @@ import javax.swing.SwingConstants;
  * @author fuxinchen
  *
  */
-public class MainCalendarView extends JPanel {
+public class CalendarView extends JPanel {
 	private static final long serialVersionUID = 3445392424930374006L;
 	private JLabel[] lbls = new JLabel[7];
 	private JToggleButton[] toggles = new JToggleButton[42];
@@ -26,9 +26,10 @@ public class MainCalendarView extends JPanel {
 	private int month;
 	private int date;
 	private String[] week = { "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" };
+	@SuppressWarnings("unused")
 	private ActionListener c;
 
-	public MainCalendarView(ActionListener e)
+	public CalendarView(ActionListener e)
 	{
 		c = e;
 		year = Calendar.getInstance().get(Calendar.YEAR);

@@ -13,6 +13,7 @@ import javax.swing.JMenuItem;
 public class MenuBar extends JMenuBar {
 	
 	private static final long serialVersionUID = -2095136277753179215L;
+	@SuppressWarnings("unused")
 	private ActionListener c;
 
 	public MenuBar(ActionListener e) {

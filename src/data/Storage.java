@@ -8,32 +8,37 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+/**
+ * @author Bastawi
+ *The object that is to be stored needs to implement Serializable.
+ */
 public class Storage implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4369339121794755806L;
 	String homeDir;
 	File save;
 	public Storage() {
-		homeDir = "C:"+System.getProperty("file.separator")+"Users"+System.getProperty("file.separator")+"Bastawi"+System.getProperty("file.separator")+"Desktop"+System.getProperty("file.separator")+"AD2";
-		//homeDir = System.getProperty("user.home");
-		save = new File(homeDir+System.getProperty("file.separator")+"Group9.txt");
-		
+		homeDir = System.getProperty("user.home");
+		save = new File(homeDir+System.getProperty("file.separator")+"Group9.txt");		
 	}
+	
 	public Storage(String input) {
 		homeDir = System.getProperty("user.home");
 		save = new File(homeDir+System.getProperty("file.separator")+input);
+	}
+	public void createFile() {
 		try {
 			save.setExecutable(true, false);
 			save.setReadable(true, false);
 			save.setWritable(true, false);
 			save.createNewFile();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.print("Failed to create new file!");
 		}
-		System.out.print(save.getPath());
 	}
-
 	public void storeData(Object ob) {
-
 		FileOutputStream fos = null;
 		System.out.print(save.canWrite());
 		try {			
@@ -41,7 +46,7 @@ public class Storage implements Serializable{
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			try {
 				oos.writeObject(ob);				
-			} catch (Exception e) {
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				System.out.print("Fail at writing!;");
 			}
@@ -50,8 +55,7 @@ public class Storage implements Serializable{
 			oos.close();
 		} catch (IOException e) {
 			System.out.print("File not found!");
-		}
-		
+		}		
 	}
 	public Object loadData() {
 		FileInputStream fis = null;

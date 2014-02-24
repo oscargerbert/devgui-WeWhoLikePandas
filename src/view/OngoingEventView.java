@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -18,9 +19,10 @@ import javax.swing.JPanel;
  * 
  * @author ninaknez
  */
-public class UpcommingEventView{
-private ActionListener c;
-public UpcommingEventView(ActionListener e){c = e;}
+public class OngoingEventView{
+	@SuppressWarnings("unused")
+	private ActionListener c;
+	public OngoingEventView(ActionListener e){c = e;}
 
 	public static void MakeEventPanel(JPanel upcomingeventPanel) {
 
@@ -28,13 +30,11 @@ public UpcommingEventView(ActionListener e){c = e;}
 		JPanel contentPanel = new JPanel();
 
 		titlePanel.add(new JLabel("Ongoinging Tasks"));
-		upcomingeventPanel.setBackground(Color.red);
-		titlePanel.setBackground(Color.yellow);
-		contentPanel.setBackground(Color.orange);
-
+		contentPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 5, true));
+		
 		// Setting the size and place of the two Panels title & content
 		titlePanel.setPreferredSize(new Dimension(400, 50));
-
+		contentPanel.setBackground(Color.RED);
 		contentPanel.add(titlePanel, BorderLayout.NORTH);
 		upcomingeventPanel.add(contentPanel);
 

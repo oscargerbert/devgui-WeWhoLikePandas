@@ -10,8 +10,16 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 
 public class StorageTest extends TestCase implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	Storage store = new Storage("testing.txt");
 	public class Dummy implements Serializable{
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
 		//private static final long serialVersionUID = -6784450006103669111L;
 		int x;
 		int s;

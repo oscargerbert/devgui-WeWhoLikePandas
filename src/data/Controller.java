@@ -1,13 +1,10 @@
 package data;
-import javax.swing.*;
-import java.awt.event.*;
-
-import view.*;
-
-import view.AddEventView;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
+import javax.swing.JLabel;
 
 public class Controller implements ActionListener {
 
@@ -72,7 +69,12 @@ public static JLabel CurrentDate(){
 		new ClockUpdater(l).start();
 	}
 	
-	 
+	 public static void saveData() {
+		 
+	 }
+	 public static void loadData() {
+		 
+	 }
 }
 	
 /*
