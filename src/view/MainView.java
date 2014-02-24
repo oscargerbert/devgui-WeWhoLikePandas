@@ -5,6 +5,9 @@ import java.awt.Dimension;
 //import java.util.Calendar;
 //import java.util.GregorianCalendar;
 import java.awt.event.ActionListener;
+import java.util.ListResourceBundle;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -23,10 +26,18 @@ import data.Controller;
  */
 public class MainView {
 	private ActionListener c;
+	//public static ResourceBundle rb;
 	
 	public MainView(ActionListener e) {
 		c = e;
 		// create all the panels to be used in our program
+		
+		//Locale currentLocale = new Locale();
+		/*ResourceBundle rb = 
+		         ResourceBundle.getBundle("resource");*/
+		//System.out.println(rb.getString("ETask"));
+		     
+
 		JFrame mainWindow = new JFrame();
 		JPanel mainPanel = new JPanel();
 		JPanel layout = new JPanel();
@@ -59,6 +70,8 @@ public class MainView {
 		mainWindow.setVisible(true);
 		mainWindow.setBounds(100, 100, 1200, 800);
 	}
+
+	
 	
 	
 }

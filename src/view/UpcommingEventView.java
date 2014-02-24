@@ -27,7 +27,7 @@ public UpcommingEventView(ActionListener e){c = e;}
 		JPanel titlePanel = new JPanel();
 		JPanel contentPanel = new JPanel();
 
-		titlePanel.add(new JLabel("Ongoinging Tasks"));
+		titlePanel.add(new JLabel(/*Main.Main.rb.getString("Ongoing Tasks")*/"Ongoing Tasks"));
 		upcomingeventPanel.setBackground(Color.red);
 		titlePanel.setBackground(Color.yellow);
 		contentPanel.setBackground(Color.orange);
