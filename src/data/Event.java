@@ -1,18 +1,36 @@
 package data;
 
-import java.sql.Time;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Event {
 	private Date eventStartDate;
 	private Date eventEndDate;
-	private Time eventStartTime;
-	private Time eventEndTime;
+
 	private String eventPlace;
-	private String eventNote;
+	private String eventNote;	
 	
 	public Event() {
-		// TODO Auto-generated constructor stub
+		Calendar cal = Calendar.getInstance();
+		
+		Date startDate = cal.getTime();
+		cal.add(Calendar.DAY_OF_MONTH, 1);
+		Date endDate = cal.getTime();
+		
+		String place = "Unknown location";
+		String note = "No note";
+		setEventStartDate(startDate);
+		setEventEndDate(endDate);
+		setEventPlace(place);
+		setEventNote(note);
+	}
+
+	public Event(Date startDate, Date endDate,
+			String place, String note) {
+		setEventStartDate(startDate);
+		setEventEndDate(endDate);
+		setEventPlace(place);
+		setEventNote(note);
 	}
 
 	public Date getEventStartDate() {
@@ -31,21 +49,7 @@ public class Event {
 		this.eventEndDate = eventEndDate;
 	}
 
-	public Time getEventStartTime() {
-		return eventStartTime;
-	}
 
-	public void setEventStartTime(Time eventStartTime) {
-		this.eventStartTime = eventStartTime;
-	}
-
-	public Time getEventEndTime() {
-		return eventEndTime;
-	}
-
-	public void setEventEndTime(Time eventEndTime) {
-		this.eventEndTime = eventEndTime;
-	}
 
 	public String getEventPlace() {
 		return eventPlace;
@@ -61,6 +65,14 @@ public class Event {
 
 	public void setEventNote(String eventNote) {
 		this.eventNote = eventNote;
+	}
+
+	public String toString() {
+		String returnString = "";
+		returnString += getEventNote() + "\t " 
+		+ getEventStartDate().toString() + " - " + getEventEndDate().toString() + "\t " 
+		+ getEventPlace();
+		return returnString;
 	}
 
 }
