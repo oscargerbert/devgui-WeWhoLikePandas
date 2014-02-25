@@ -25,7 +25,7 @@ public class MenuBar extends JMenuBar {
 		ResourceBundle rb = 
 		         ResourceBundle.getBundle("resource");
 		//System.out.println(rb.getString("ETask"));
-		System.out.println("Andrea är bäst och slår alla null pointer exceptions!!");
+		//System.out.println("Andrea är bäst och slår alla null pointer exceptions!!");
 		JMenu file = new JMenu(rb.getString("File"));
 		JMenu edit = new JMenu(rb.getString("Edit"));
 		JMenu extra = new JMenu(rb.getString("Extra"));
