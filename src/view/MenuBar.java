@@ -1,12 +1,10 @@
 package view;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import java.awt.event.*;
 import java.util.ResourceBundle;
+
 
 import data.Controller;
 import Main.Main;
@@ -17,6 +15,7 @@ import Main.Main;
 public class MenuBar extends JMenuBar {
 	
 	private static final long serialVersionUID = -2095136277753179215L;
+	@SuppressWarnings("unused")
 	private ActionListener c;
 
 	public MenuBar(ActionListener e) {

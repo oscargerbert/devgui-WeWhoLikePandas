@@ -1,9 +1,8 @@
 package data;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Date;
-
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 
 public class ClockUpdater  extends Thread{
 	private JLabel clockLabel;
